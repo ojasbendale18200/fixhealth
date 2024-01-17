@@ -6,7 +6,11 @@ import DoctorDetails from "./DoctorsDetails";
 
 interface Doctor {
   name: string;
-  expertise: string;
+  qualifications: string;
+  experience: string;
+  specialties: string;
+  imageSrc: string;
+  altText: string;
   city: string;
 }
 
@@ -220,7 +224,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ defaultCity }) => {
           </div>
         </form>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 h-[50px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 h-[600px] ">
           {availableDoctors.map((item) => (
             <DoctorDetails {...item} />
           ))}

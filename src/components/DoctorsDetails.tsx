@@ -2,25 +2,40 @@ import React from "react";
 
 interface DoctorDetailsProps {
   name: string;
-  expertise: string;
+  qualifications: string;
+  experience: string;
+  specialties: string;
+  imageSrc: string;
+  altText: string;
   city: string;
 }
 
 const DoctorDetails: React.FC<DoctorDetailsProps> = ({
   name,
-  expertise,
+  qualifications,
+  experience,
+  specialties,
+  imageSrc,
+  altText,
   city,
 }) => {
   return (
-    <div key={name} className="bg-gray-800 p-6 rounded-lg shadow-md text-white">
-      <h3 className="text-2xl font-semibold mb-2">{name}</h3>
-      <div className="mb-2">
-        <label className="text-gray-400">Expertise:</label>
-        <p className="text-gray-300">{expertise}</p>
-      </div>
-      <div className="mb-2">
-        <label className="text-gray-400">City:</label>
-        <p className="text-gray-300">{city}</p>
+    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col">
+      <img className="w-full h-[300px] object-cover " src={imageSrc} alt={altText} />
+      <div className="p-6 ">
+        <h1 className="text-white font-bold text-2xl mb-2">{name}</h1>
+        <p className="text-white text-base mb-4">{qualifications}</p>
+        <p className="text-white text-base mb-4">{experience}</p>
+        <p className="text-white text-base mb-4">{city}</p>
+        <div className="flex ">
+          <p className="text-gray-300">Specialities:- </p>
+          <p className="pl-3">{specialties}</p>
+        </div>
+        <div className="mt-4">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Know More
+          </button>
+        </div>
       </div>
     </div>
   );
