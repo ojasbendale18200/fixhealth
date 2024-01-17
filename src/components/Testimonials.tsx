@@ -50,7 +50,7 @@ const testimonialsData: Testimonial[] = [
 const Testimonials: React.FC = () => {
   return (
     <div className="p-8 ">
-      <div className="container mx-auto">
+      <div className="container mx-auto ml-8">
         <h2 className="text-3xl font-semibold text-white mb-20 text-center">
           What Our Patients Say
         </h2>
