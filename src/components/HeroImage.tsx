@@ -1,4 +1,4 @@
-// src/components/HeroImage.tsx
+
 
 const HeroImage: React.FC = () => {
   return (
