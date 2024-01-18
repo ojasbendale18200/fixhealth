@@ -15,7 +15,7 @@ const HeroImage: React.FC = () => {
           Our team of experts create tailor-made programs based on your specific
           needs, goals, and ability.
         </h1>
-        <button className="hidden md:flex space-x-4 bg-teal-600 p-2 rounded mt-4">
+        <button className="md:flex space-x-4 bg-teal-600 p-2 rounded mt-4">
           <Link to="/booking"> Book Slot</Link>
         </button>
       </div>
