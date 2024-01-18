@@ -41,4 +41,37 @@ export const testimonialsData: Testimonial[] = [
     ageProfession: "30, Athlete",
     rating: 5,
   },
+  {
+    id: 4,
+    title: "Quick recovery after a sports injury",
+    image:
+      "https://www.fixhealth.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Ftcfp7i31d%2FDeep_P-vGzCQ88.png%3FupdatedAt%3D1686564335311&w=1920&q=75",
+    feedback:
+      "Amazing service! Got back on my feet in no time. Highly recommended.",
+    name: "Alex Rodriguez",
+    ageProfession: "30, Athlete",
+    rating: 5,
+  },
+  {
+    id: 5,
+    title: "Quick recovery after a sports injury",
+    image:
+      "https://www.fixhealth.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Ftcfp7i31d%2FDeep_P-vGzCQ88.png%3FupdatedAt%3D1686564335311&w=1920&q=75",
+    feedback:
+      "Amazing service! Got back on my feet in no time. Highly recommended.",
+    name: "Alex Rodriguez",
+    ageProfession: "30, Athlete",
+    rating: 5,
+  },
+  {
+    id: 6,
+    title: "Quick recovery after a sports injury",
+    image:
+      "https://www.fixhealth.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Ftcfp7i31d%2FDeep_P-vGzCQ88.png%3FupdatedAt%3D1686564335311&w=1920&q=75",
+    feedback:
+      "Amazing service! Got back on my feet in no time. Highly recommended.",
+    name: "Alex Rodriguez",
+    ageProfession: "30, Athlete",
+    rating: 5,
+  },
 ];

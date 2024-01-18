@@ -1,15 +1,19 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
     <nav className="bg-dark p-6">
-      <div className="container mx-auto flex items-center justify-between">
-        <img
-          src="https://ik.imagekit.io/tcfp7i31d/logo_with_yp_black_urUeyjKwY.svg"
-          alt="Logo"
-          className="h-8"
-        />
+      <div className="container mx-auto flex items-center justify-between px-20">
+        <Link to={"/"}>
+          {" "}
+          <img
+            src="https://ik.imagekit.io/tcfp7i31d/logo_with_yp_black_urUeyjKwY.svg"
+            alt="Logo"
+            className="h-8"
+          />
+        </Link>
 
         <div className="md:hidden">
           <button className="text-white focus:outline-none">
@@ -34,9 +38,12 @@ const Navbar: React.FC = () => {
 
         <ul className="hidden md:flex space-x-4 mr-6 ">
           <li>
-            <a href="#" className="text-white hover:text-teal-200">
+            <Link
+              to="/"
+              className="text-white hover:text-teal-200 cursor-pointer"
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="text-white hover:text-teal-200">
@@ -55,11 +62,11 @@ const Navbar: React.FC = () => {
           </li>
         </ul>
 
-        <ul className="hidden md:flex space-x-4 bg-teal-400 p-2 rounded">
+        <ul className="hidden md:flex space-x-4 bg-teal-600 p-2 rounded">
           <li>
-            <a href="#" className="text-white">
+            <Link to="/booking" className="text-white">
               Book Now
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

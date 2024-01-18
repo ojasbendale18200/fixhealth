@@ -1,16 +1,45 @@
 import React from "react";
 import { testimonialsData } from "../lib/TestimonialData";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Testimonials: React.FC = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
   return (
-    <div className="p-8 ">
-      <div className="container mx-auto ml-8">
-        <h2 className="text-3xl font-semibold text-white mb-20 text-center">
+    <div className="p-8">
+      <div className="max-w-screen-xl mx-auto">
+        <h2 className="text-3xl font-semibold text-white mb-8 text-center">
           What Our Patients Say
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonialsData.map((item) => (
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-700 p-6 mb-8">
+
+        <Slider {...settings} className="mx-auto">
+          {testimonialsData.map((item, index) => (
+            <div
+              key={index}
+              className="max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-gray-700 p-6 mb-8"
+            >
               <h1 className="font-bold text-xl mb-2">{item.title}</h1>
               <img
                 className="w-full h-48 object-cover mb-6"
@@ -35,7 +64,7 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </div>
   );

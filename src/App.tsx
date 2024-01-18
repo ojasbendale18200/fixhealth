@@ -1,10 +1,10 @@
 import "./App.css";
 
-import Testimonials from "./components/Testimonials";
-import HeroImage from "./components/HeroImage";
-import Navbar from "./components/Navbar";
+
 import BookingForm from "./components/BookingForm";
 import { useEffect, useState } from "react";
+import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [city, setCity] = useState<string | null>(null);
@@ -19,11 +19,11 @@ function App() {
   }, []);
   return (
     <>
-      <div className=" text-white  bg-black">
-        <Navbar />
-        <HeroImage />
-        <BookingForm defaultCity={city} />
-        <Testimonials />
+      <div className=" text-white  bg-black ">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/booking" element={<BookingForm defaultCity={city} />} />
+        </Routes>
       </div>
     </>
   );
